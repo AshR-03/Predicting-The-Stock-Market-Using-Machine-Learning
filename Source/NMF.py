@@ -1,6 +1,6 @@
 import numpy as np
 
-class NMF():
+class nonNegMatrixFac():
     def __init__(self, W, H, max_iters=40000):
         self.W = W
         self.H = H
