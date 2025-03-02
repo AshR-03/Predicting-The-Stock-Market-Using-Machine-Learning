@@ -8,6 +8,16 @@ class nonNegMatrixFac():
         self.loss = []
 
     def fit(self, V):
+        '''
+        Iterative non negative matrix factorisation function.
+    
+        Parameters:
+        V: nxn matrix holding the positive data
+    
+        Returns:
+        W: The updated positive W matrix for the formula V Approx= WH
+        H: The updated positive H matrix for the formula V Approx= WH
+        '''
         self.loss = np.zeros((self.max_iters, 1))
         self.loss[0] = np.linalg.norm(V - self.W @ self.H, ord="fro")
 
